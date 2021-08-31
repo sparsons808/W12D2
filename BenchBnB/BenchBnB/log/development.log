@@ -1,0 +1,166 @@
+Started GET "/" for ::1 at 2021-08-31 14:23:12 -0400
+
+ActiveRecord::NoDatabaseError - FATAL:  database "BenchBnB_development" does not exist:
+
+Started POST "/__better_errors/d472abad0dacfd28/variables" for ::1 at 2021-08-31 14:23:12 -0400
+Started GET "/" for ::1 at 2021-08-31 14:48:13 -0400
+
+ActiveRecord::NoDatabaseError - FATAL:  database "BenchBnB_development" does not exist:
+
+Started POST "/__better_errors/2483aaaf4f16b30d/variables" for ::1 at 2021-08-31 14:48:13 -0400
+  [1m[35m (189.3ms)[0m  [1m[35mCREATE DATABASE "BenchBnB_development" ENCODING = 'unicode'[0m
+  ↳ bin/rails:9
+  [1m[35m (48.1ms)[0m  [1m[35mCREATE DATABASE "BenchBnB_test" ENCODING = 'unicode'[0m
+  ↳ bin/rails:9
+  [1m[35m (35.8ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL PRIMARY KEY)[0m
+  ↳ bin/rails:9
+  [1m[35m (6.2ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" character varying NOT NULL PRIMARY KEY, "value" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ bin/rails:9
+  [1m[35m (6.2ms)[0m  [1m[34mSELECT pg_try_advisory_lock(1532413478262727620)[0m
+  ↳ bin/rails:9
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+Migrating to CreateUsers (20210831185051)
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT pg_advisory_unlock(1532413478262727620)[0m
+  ↳ bin/rails:9
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_try_advisory_lock(1532413478262727620)[0m
+  ↳ bin/rails:9
+  [1m[35m (1.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+Migrating to CreateUsers (20210831185051)
+  [1m[35m (4.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[35m (28.3ms)[0m  [1m[35mCREATE TABLE "users" ("id" bigserial primary key, "username" character varying NOT NULL, "name" character varying NOT NULL, "email" character varying NOT NULL, "password_digest" character varying NOT NULL, "session_token" character varying NOT NULL)[0m
+  ↳ db/migrate/20210831185051_create_users.rb:3
+  [1m[35m (2.2ms)[0m  [1m[35mCREATE UNIQUE INDEX  "index_users_on_username" ON "users"  ("username")[0m
+  ↳ db/migrate/20210831185051_create_users.rb:10
+  [1m[35m (1.7ms)[0m  [1m[35mCREATE UNIQUE INDEX  "index_users_on_session_token" ON "users"  ("session_token")[0m
+  ↳ db/migrate/20210831185051_create_users.rb:11
+  [1m[35m (1.0ms)[0m  [1m[35mCREATE UNIQUE INDEX  "index_users_on_email" ON "users"  ("email")[0m
+  ↳ db/migrate/20210831185051_create_users.rb:12
+  [1m[35m (0.9ms)[0m  [1m[35mCREATE  INDEX  "index_users_on_name" ON "users"  ("name")[0m
+  ↳ db/migrate/20210831185051_create_users.rb:13
+  [1m[36mActiveRecord::SchemaMigration Create (4.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20210831185051"]]
+  ↳ bin/rails:9
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:9
+  [1m[36mActiveRecord::InternalMetadata Load (1.2ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ bin/rails:9
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[36mActiveRecord::InternalMetadata Create (1.9ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "environment"], ["value", "development"], ["created_at", "2021-08-31 19:00:31.650195"], ["updated_at", "2021-08-31 19:00:31.650195"]]
+  ↳ bin/rails:9
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:9
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_advisory_unlock(1532413478262727620)[0m
+  ↳ bin/rails:9
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+Started GET "/" for ::1 at 2021-08-31 15:01:10 -0400
+  [1m[35m (2.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Library/Ruby/Gems/2.6.0/gems/activerecord-5.2.6/lib/active_record/log_subscriber.rb:98
+
+ActionController::RoutingError - uninitialized constant ApllicationController:
+
+Started POST "/__better_errors/2d645f84cd010a35/variables" for ::1 at 2021-08-31 15:01:10 -0400
+Started GET "/" for ::1 at 2021-08-31 15:03:05 -0400
+
+SyntaxError - syntax error, unexpected ':', expecting end
+        render: root
+              ^:
+  app/controllers/static_pages_controller.rb:3:in `'
+
+Started POST "/__better_errors/4620ee7723b8ea61/variables" for ::1 at 2021-08-31 15:03:05 -0400
+Started GET "/" for ::1 at 2021-08-31 15:03:59 -0400
+
+ActionController::RoutingError - uninitialized constant ApllicationController:
+
+Started POST "/__better_errors/8e1dcaedfe132187/variables" for ::1 at 2021-08-31 15:03:59 -0400
+Started POST "/__better_errors/8e1dcaedfe132187/variables" for ::1 at 2021-08-31 15:08:53 -0400
+Started POST "/__better_errors/8e1dcaedfe132187/variables" for ::1 at 2021-08-31 15:08:55 -0400
+Started POST "/__better_errors/8e1dcaedfe132187/variables" for ::1 at 2021-08-31 15:08:58 -0400
+Started POST "/__better_errors/8e1dcaedfe132187/variables" for ::1 at 2021-08-31 15:09:01 -0400
+Started POST "/__better_errors/8e1dcaedfe132187/variables" for ::1 at 2021-08-31 15:09:03 -0400
+Started POST "/__better_errors/8e1dcaedfe132187/variables" for ::1 at 2021-08-31 15:09:06 -0400
+Started POST "/__better_errors/8e1dcaedfe132187/variables" for ::1 at 2021-08-31 15:09:08 -0400
+Started POST "/__better_errors/8e1dcaedfe132187/variables" for ::1 at 2021-08-31 15:09:09 -0400
+Started POST "/__better_errors/8e1dcaedfe132187/variables" for ::1 at 2021-08-31 15:09:10 -0400
+Started POST "/__better_errors/8e1dcaedfe132187/variables" for ::1 at 2021-08-31 15:09:11 -0400
+Started POST "/__better_errors/8e1dcaedfe132187/variables" for ::1 at 2021-08-31 15:09:13 -0400
+Started POST "/__better_errors/8e1dcaedfe132187/variables" for ::1 at 2021-08-31 15:09:13 -0400
+Started POST "/__better_errors/8e1dcaedfe132187/variables" for ::1 at 2021-08-31 15:09:14 -0400
+Started POST "/__better_errors/8e1dcaedfe132187/variables" for ::1 at 2021-08-31 15:09:16 -0400
+Started POST "/__better_errors/8e1dcaedfe132187/variables" for ::1 at 2021-08-31 15:09:17 -0400
+Started POST "/__better_errors/8e1dcaedfe132187/variables" for ::1 at 2021-08-31 15:09:19 -0400
+Started POST "/__better_errors/8e1dcaedfe132187/variables" for ::1 at 2021-08-31 15:09:20 -0400
+Started POST "/__better_errors/8e1dcaedfe132187/variables" for ::1 at 2021-08-31 15:09:20 -0400
+Started POST "/__better_errors/8e1dcaedfe132187/variables" for ::1 at 2021-08-31 15:09:32 -0400
+Started GET "/root" for ::1 at 2021-08-31 15:09:43 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/root"):
+  
+actionpack (5.2.6) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.6) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.6) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.6) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.6) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.6) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.6) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.6) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+railties (5.2.6) lib/rails/engine.rb:524:in `call'
+puma (3.12.6) lib/puma/configuration.rb:227:in `call'
+puma (3.12.6) lib/puma/server.rb:706:in `handle_request'
+puma (3.12.6) lib/puma/server.rb:476:in `process_client'
+puma (3.12.6) lib/puma/server.rb:334:in `block in run'
+puma (3.12.6) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started POST "/__better_errors/8e1dcaedfe132187/variables" for ::1 at 2021-08-31 15:09:49 -0400
+Started GET "/" for ::1 at 2021-08-31 15:09:51 -0400
+
+ActionController::RoutingError - uninitialized constant ApllicationController:
+
+Started POST "/__better_errors/918613dd65866ce7/variables" for ::1 at 2021-08-31 15:09:51 -0400
+Started GET "/" for ::1 at 2021-08-31 15:12:32 -0400
+
+ActionController::RoutingError - uninitialized constant ApllicationController:
+
+Started POST "/__better_errors/228734f007d09b51/variables" for ::1 at 2021-08-31 15:12:32 -0400
+Started GET "/" for ::1 at 2021-08-31 15:12:35 -0400
+
+ActionController::RoutingError - uninitialized constant ApllicationController:
+
+Started POST "/__better_errors/bd5ad50eb9d7e4db/variables" for ::1 at 2021-08-31 15:12:35 -0400
+Started GET "/" for ::1 at 2021-08-31 15:13:02 -0400
+
+ActionController::RoutingError - uninitialized constant ApllicationController:
+
+Started POST "/__better_errors/a32a99031acc7165/variables" for ::1 at 2021-08-31 15:13:02 -0400
+Started GET "/" for ::1 at 2021-08-31 15:13:03 -0400
+
+ActionController::RoutingError - uninitialized constant ApllicationController:
+
+Started POST "/__better_errors/8e6d6bd642a084d5/variables" for ::1 at 2021-08-31 15:13:03 -0400
+Started GET "/" for ::1 at 2021-08-31 15:16:44 -0400
+
+ActionController::RoutingError - uninitialized constant ApllicationController:
+
+Started POST "/__better_errors/ae35bb9c9510a1c4/variables" for ::1 at 2021-08-31 15:16:44 -0400
+Started GET "/" for ::1 at 2021-08-31 15:17:25 -0400
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html within layouts/application
+  Rendered static_pages/root.html within layouts/application (0.2ms)
+Completed 200 OK in 742ms (Views: 741.6ms | ActiveRecord: 0.0ms)
+
+
