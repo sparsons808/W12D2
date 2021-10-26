@@ -1,5 +1,5 @@
 import { connect } from "react-redux";
-import { createNewUser } from "../../actions/sessioin";up
+import { createNewUser } from "../../actions/sessioin";
 import Signup from './signup'
 
 

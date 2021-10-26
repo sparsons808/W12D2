@@ -4,7 +4,7 @@ const _nullSession = {
     currentUser: null
 }
 
-export const sessioinReducer = (state = _nullSession, action) => {
+export const sessionReducer = (state = _nullSession, action) => {
     Object.freeze(state);
 
     switch(action.type) {
