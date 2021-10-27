@@ -4,7 +4,7 @@
 export const postUser = user => (
     $.ajax({
         method: 'POST',
-        url:'api/users',
+        url:'api/users', // this connnects to your controller
         data: { user }
     })
 );
