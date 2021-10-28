@@ -15,20 +15,24 @@ const logoutCurrentUser = () => ({
 
 export const receiveErrors = errors => ({
     type: RECEIVE_ERRORS,
-    errors: errors
+    errors
 })
 
 export const login = (user) => dispatch => (
     SessionApi.logIn(user)
-    .then(res => dispatch(receiveCurrentUser(res)))
+    .then(res => dispatch(receiveCurrentUser(res)),
+        errors => dispatch(receiveErrors(errors.responseJSON))
+    )
 );
 
 export const logout = () => dispatch => (
     SessionApi.logOut()
-    .then(res => dispatch(logoutCurrentUser()))
+    .then(() => dispatch(logoutCurrentUser()))
 );
 
 export const signUp = (user) => dispatch => (
     SessionApi.signUp(user)
-    .then(res => dispatch(receiveCurrentUser(user)))
+    .then(res => dispatch(receiveCurrentUser(res)),
+        errors => dispatch(receiveErrors(errors.responseJSON))
+    )
 );
