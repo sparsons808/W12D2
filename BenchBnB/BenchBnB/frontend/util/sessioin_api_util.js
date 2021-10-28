@@ -1,4 +1,4 @@
-
+// creates new user
 export const signUp = user => (
     $.ajax({
         url: '/api/users',
